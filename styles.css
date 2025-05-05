@@ -1,4 +1,3 @@
-
 body, html {
     margin: 0;
     padding: 0;
@@ -25,7 +24,7 @@ body, html {
     top: 0; left: 0;
     width: 100%;
     height: 100%;
-    background: url('sunsets/atlantaskyline.jpg') no-repeat center center/cover;
+    background: url('/Users/jowet/Desktop/cs1300/portfolio/sunsets/atlantaskyline.jpg') no-repeat center center/cover;
     filter: blur(2px);
     z-index: -1;
 }
@@ -107,11 +106,31 @@ body, html {
 }
 
 .flower {
+  position: absolute;
+  width: 60px;
+  height: 60px;
+  background-image: url('/Users/jowet/Desktop/cs1300/portfolio/misc/flower.png');
+  background-size: contain;
+  background-repeat: no-repeat;
+  opacity: 0.3;
+  pointer-events: none;
+}
+
+.flower-top-left { top: 30px; left: 30px; }
+.flower-top-right { top: 30px; right: 30px; }
+.flower-mid-left { top: 150px; left: 60px; }
+.flower-mid-right { top: 150px; right: 60px; }
+.flower-bottom-left { bottom: 30px; left: 30px; }
+.flower-bottom-right { bottom: 30px; right: 30px; }
+
+
+/* .flower {
     position: absolute;
     width: 60px;
     height: 60px;
-    background-image: url('flower-outline.svg');
-    background-size: contain;
+    background-image: url('/Users/jowet/Desktop/cs1300/portfolio/misc/flower.png');
+    /* url('flower-outline.svg'); */
+    /* background-size: contain;
     background-repeat: no-repeat;
     opacity: 0.3;
 }
@@ -119,7 +138,7 @@ body, html {
 .flower-top-left { top: 20px; left: 20px; }
 .flower-top-right { top: 20px; right: 20px; }
 .flower-bottom-left { bottom: 20px; left: 20px; }
-.flower-bottom-right { bottom: 20px; right: 20px; }
+.flower-bottom-right { bottom: 20px; right: 20px; } */ */
 
 .fade-in {
     opacity: 0;
@@ -132,7 +151,7 @@ body, html {
     transform: translateY(0);
 }
 
-.flower {
+/* .flower {
     position: absolute;
     width: 70px;
     opacity: 0.3;
@@ -168,7 +187,7 @@ body, html {
 .flower-bottom-right {
     bottom: 20px;
     right: 40px;
-}
+} */
 
 .projects-section {
     padding: 100px 20px;
@@ -444,3 +463,32 @@ body, html {
   }
 }
 
+.timeline-entry.left {
+  left: 0;
+}
+
+.timeline-entry.right {
+  left: 50%;
+}
+
+.timeline-entry.right::before {
+  left: -10px;
+}
+
+@media screen and (max-width: 768px) {
+  .timeline::after {
+    left: 20px; 
+  }
+
+  .timeline-entry {
+    width: 100%;
+    padding-left: 40px;
+    padding-right: 25px;
+    left: 0 !important; 
+  }
+
+  .timeline-entry::before {
+    left: 0;
+    right: auto;
+  }
+}
