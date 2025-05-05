@@ -20,7 +20,29 @@
     <a href="#about" class="scroll-down">&#x25BC;</a>
   </div>
 
+  <header id="navbar" class="main-header hidden">
+    <div class="nav-bar">
+      <div class="nav-logo">Jowet Haile</div>
+      <nav class="nav-links">
+        <a href="#about">About</a>
+        <a href="#projects">Projects</a>
+        <a href="#tech-stack">Tech Stack</a>
+        <a href="#experience">Work Experience</a>
+        <a href="#education">Education</a>
+        <a href="https://www.linkedin.com/in/jowet-haile" target="_blank">LinkedIn</a>
+      </nav>
+    </div>
+  </header>  
+
   <section class="about" id="about">
+    <div class="flower-wrapper">
+      <img src="misc/flower.png" alt="flower" class="flower flower-top-left fade-in">
+      <img src="misc/flower.png" alt="flower" class="flower flower-top-right fade-in">
+      <img src="misc/flower.png" alt="flower" class="flower flower-mid-left fade-in">
+      <img src="misc/flower.png" alt="flower" class="flower flower-mid-right fade-in">
+      <img src="misc/flower.png" alt="flower" class="flower flower-bottom-left fade-in">
+      <img src="misc/flower.png" alt="flower" class="flower flower-bottom-right fade-in">
+      </div>
     <h2 class="fade-in">Who am I?!</h2>
     <img src="misc/headshot-1.jpeg" alt="headshot" class="profile-pic fade-in">
     <p class="fade-in">
@@ -29,13 +51,7 @@
       and initiatives through software engineering and program management! I do not like fitting into one box,
       hence the double major, double career aspirations, so feel free to follow along while I continue to merge my interests!
     </p>
-    <img src="misc/flower.png" alt="flower" class="flower flower-top-left fade-in">
-    <img src="misc/flower.png" alt="flower" class="flower flower-top-right fade-in">
-    <img src="misc/flower.png" alt="flower" class="flower flower-mid-left fade-in">
-    <img src="misc/flower.png" alt="flower" class="flower flower-mid-right fade-in">
-    <img src="misc/flower.png" alt="flower" class="flower flower-bottom-left fade-in">
-    <img src="misc/flower.png" alt="flower" class="flower flower-bottom-right fade-in">
-
+    
   </section>
 
   <script src="script.js"></script>
@@ -127,17 +143,11 @@
       </div>
     </div>
   </section>
-  <section class="timeline-section">
+  <section class="timeline-section" id="experience">
     <h2>Experience</h2>
     <div class="timeline">
       <div class="timeline-entry left">
         <div class="timeline-content">
-  <!-- <section class="timeline-section">
-  <h2 class="timeline-title">Work & Education Timeline</h2>
-  <div class="timeline-container">
-    <div class="timeline">
-      <div class="timeline-item left">
-        <div class="timeline-content"> -->
           <h3>Spring 2025 - Sociology Computation</h3>
           <p>description.</p>
         </div>
@@ -167,7 +177,7 @@
   </div>
 </section>
 
-<section class="timeline-section">
+<section class="timeline-section" id="education">
   <h2>Education</h2>
   <div class="timeline">
     <div class="timeline-entry left">
@@ -319,4 +329,20 @@ window.onload = () => {
   });
 };
 
+</script>
+
+<script>
+  window.addEventListener('scroll', () => {
+    const navbar = document.getElementById('navbar');
+    const hero = document.querySelector('.hero');
+    const triggerPoint = hero.offsetHeight;
+
+    if (window.scrollY > triggerPoint) {
+      navbar.classList.remove('hidden');
+      navbar.classList.add('visible');
+    } else {
+      navbar.classList.remove('visible');
+      navbar.classList.add('hidden');
+    }
+  });
 </script>
