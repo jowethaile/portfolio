@@ -1,0 +1,446 @@
+
+body, html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    font-family: 'Arial', sans-serif;
+    scroll-behavior: smooth;
+}
+
+.hero {
+    position: relative;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: white;
+    flex-direction: column;
+    overflow: hidden;
+}
+
+.hero::before {
+    content: "";
+    position: absolute;
+    top: 0; left: 0;
+    width: 100%;
+    height: 100%;
+    background: url('sunsets/atlantaskyline.jpg') no-repeat center center/cover;
+    filter: blur(2px);
+    z-index: -1;
+}
+
+.content h1 {
+    font-size: 4rem;
+    margin: 0;
+}
+
+.content h2 {
+    font-size: 2rem;
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.cursor {
+    display: inline-block;
+    margin-left: 5px;
+    font-weight: bold;
+    font-size: 2rem;
+    animation: blink 0.7s infinite;
+}
+
+@keyframes blink {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0; }
+}
+
+.scroll-down {
+    position: absolute;
+    bottom: 30px;
+    right: 30px; 
+    font-size: 2rem;
+    color: white;
+    text-decoration: none;
+    animation: bounce 2s infinite;
+}
+
+
+@keyframes bounce {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(8px); }
+}
+
+
+.about {
+    position: relative;
+    background-color:#ffeef2;
+     /* rgba(255, 235, 240, 0.6);  #ffeaea; */
+    padding: 100px 20px;
+    text-align: center;
+    overflow: hidden;
+}
+
+
+.about h2 {
+    font-size: 2.5rem;
+    margin-bottom: 30px;
+    color: #333;
+}
+
+.profile-pic {
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 50%;
+    margin-bottom: 30px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.about p {
+    max-width: 600px;
+    margin: 0 auto;
+    font-size: 1.1rem;
+    line-height: 1.7;
+    color: #444;
+}
+
+.flower {
+    position: absolute;
+    width: 60px;
+    height: 60px;
+    background-image: url('flower-outline.svg');
+    background-size: contain;
+    background-repeat: no-repeat;
+    opacity: 0.3;
+}
+
+.flower-top-left { top: 20px; left: 20px; }
+.flower-top-right { top: 20px; right: 20px; }
+.flower-bottom-left { bottom: 20px; left: 20px; }
+.flower-bottom-right { bottom: 20px; right: 20px; }
+
+.fade-in {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 1s ease-out, transform 1s ease-out;
+}
+
+.fade-in.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.flower {
+    position: absolute;
+    width: 70px;
+    opacity: 0.3;
+    pointer-events: none;
+}
+
+
+.flower-top-left {
+    top: 30px;
+    left: 30px;
+}
+
+.flower-top-right {
+    top: 40px;
+    right: 40px;
+}
+
+.flower-mid-left {
+    top: 150px;
+    left: 60px;
+}
+
+.flower-mid-right {
+    top: 160px;
+    right: 60px;
+}
+
+.flower-bottom-left {
+    bottom: 30px;
+    left: 40px;
+}
+
+.flower-bottom-right {
+    bottom: 20px;
+    right: 40px;
+}
+
+.projects-section {
+    padding: 100px 20px;
+    background-color: rgba(255, 235, 240, 0.6); 
+    backdrop-filter: blur(4px);
+    text-align: center;
+  }
+  
+  .projects-header {
+    max-width: 700px;
+    margin: 0 auto 50px;
+  }
+  
+  .projects-header h2 {
+    font-size: 2.8rem;
+    margin-bottom: 10px;
+    color: #333;
+  }
+  
+  .projects-header p {
+    font-size: 1.1rem;
+    color: #555;
+    line-height: 1.6;
+  }
+  
+  .project-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(280px, 1fr));
+    gap: 40px; 
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 40px 20px;
+    box-sizing: border-box;
+  }
+  
+  @media (max-width: 768px) {
+    .project-grid {
+      grid-template-columns: 1fr;
+    }
+  }
+  
+  .project-card {
+    background-color: rgba(255, 255, 255, 0.4);
+    border-radius: 15px;
+    padding: 30px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease;
+    text-align: center;
+    min-height: 200px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  
+  .project-card:hover {
+    transform: translateY(-5px);
+  }
+  
+  
+  .card-inner {
+    position: relative;
+    width: 100%;
+    height: 300px;
+    transition: transform 0.8s;
+    transform-style: preserve-3d;
+    border-radius: 16px;
+  }
+  
+  .project-card:hover .card-inner {
+    transform: rotateY(180deg);
+  }
+  
+  .card-front, .card-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    border-radius: 16px;
+    padding: 25px 20px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  
+  .card-front {
+    background-color: #ffeef2;
+    color: #222;
+  }
+  
+  .card-front h3 {
+    font-size: 1.4rem;
+    margin-bottom: 10px;
+  }
+  
+  .card-front p {
+    font-size: 1rem;
+    color: #444;
+  }
+  
+  .card-back {
+    background-size: cover;
+    background-position: center;
+    transform: rotateY(180deg);
+    color: white;
+    position: relative;
+    text-align: center;
+  }
+  
+  .card-back h3 {
+    position: relative;
+    z-index: 2;
+    font-size: 1.6rem;
+    margin: 0 auto;
+  }
+  
+  .card-back .overlay {
+    position: absolute;
+    inset: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    border-radius: 16px;
+    z-index: 1;
+  }
+  
+.tech-stack-section {
+  padding: 80px 20px;
+  background-color: #ffeef2;
+  text-align: center;
+}
+
+.section-title {
+  font-size: 2.5rem;
+  font-weight: bold;
+  margin-bottom: 40px;
+  color: #333;
+}
+
+.category h3 {
+  font-size: 1.5rem;
+  margin-bottom: 20px;
+  color: #444;
+}
+
+.icon-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 30px;
+  margin-bottom: 60px;
+}
+
+.icon-bubble {
+  width: 90px;
+  height: 90px;
+  background: radial-gradient(circle at top left, #f8d7da, #fce4ec);
+  border-radius: 50%;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform 0.3s ease;
+}
+
+.icon-bubble:hover {
+  transform: scale(1.1);
+}
+
+.icon-bubble img {
+  width: 50%;
+  height: auto;
+}
+
+.timeline-section {
+  background-color: rgba(255, 235, 240, 0.6);
+  padding: 80px 20px;
+  text-align: center;
+}
+
+.timeline-section h2 {
+  font-size: 2.5rem;
+  color: #333;
+  margin-bottom: 50px;
+}
+
+.timeline {
+  position: relative;
+  max-width: 1000px;
+  margin: auto;
+  padding: 0 20px;
+}
+
+.timeline::after {
+  content: '';
+  position: absolute;
+  width: 4px;
+  background-color: #767676;
+  top: 0;
+  bottom: 0;
+  left: 50%;
+  margin-left: -2px;
+}
+
+.timeline-entry {
+  padding: 20px 30px;
+  position: relative;
+  background-color: inherit;
+  width: 50%;
+}
+.timeline-entry::before {
+  content: '';
+  position: absolute;
+  top: 25px;
+  left: 100%;
+  transform: translateX(-50%);
+  width: 40px;
+  height: 40px;
+  background-image: url('/Users/jowet/Desktop/cs1300/portfolio/misc/flower.png'); 
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  z-index: 1;
+}
+
+.timeline-entry.left {
+  left: 0;
+}
+
+.timeline-entry.right {
+  left: 50%;
+}
+
+.timeline-entry.right::before {
+  left: -10px;
+}
+
+.timeline-content {
+  background-color: #ffe2e2;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+  text-align: left;
+}
+
+.timeline-content h3 {
+  margin-top: 0;
+  font-size: 1.2rem;
+  color: #333;
+}
+
+.timeline-content p {
+  margin: 10px 0 0;
+  font-size: 1rem;
+  color: #555;
+}
+
+@media screen and (max-width: 768px) {
+  .timeline::after {
+    left: 20px;
+  }
+
+  .timeline-entry {
+    width: 100%;
+    padding-left: 40px;
+    padding-right: 25px;
+  }
+
+  .timeline-entry.right {
+    left: 0%;
+  }
+
+  .timeline-entry::before {
+    left: 0;
+  }
+}
+

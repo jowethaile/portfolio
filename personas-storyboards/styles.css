@@ -1,0 +1,120 @@
+body.project-page {
+  display: flex;
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #ffe6ef;
+  color: #565656;
+  position: relative;
+}
+
+
+.project-background {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: url('./assets/sunset3.HEIC') no-repeat center center/cover;
+  filter: blur(8px) brightness(0.8);
+  z-index: -1;
+  opacity: 0.7;
+}
+
+.project-card {
+  background-color: #ffe6ef;
+  margin: 50px auto;
+  padding: 40px;
+  width: 90%;
+  max-width: 900px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
+  border-radius: 16px;
+  backdrop-filter: blur(4px);
+}
+
+#sidebar {
+  display: none;
+}
+
+#logoBar {
+  width: 100%;
+  text-align: center;
+  background: transparent;
+  color: #333;
+  padding-bottom: 20px;
+}
+
+#interviews h3 {
+  text-align: center;
+}
+
+#siteLogo {
+  width: 140px;
+  margin: 15px auto;
+  display: block;
+  height: auto;
+}
+
+section {
+  margin-bottom: 30px;
+  padding: 20px;
+  background-color: white;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+  border-radius: 12px;
+}
+
+.centered-large-image {
+  display: block;
+  margin: 20px auto;
+  width: 90%;
+  max-width: 800px;
+  border-radius: 10px;
+}
+
+.persona-container {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.persona {
+  text-align: center;
+  width: 45%;
+}
+
+.persona img {
+  width: 100%;
+  max-width: 400px;
+  height: auto;
+  border-radius: 8px;
+}
+
+@media (max-width: 900px) {
+  .project-card {
+    margin-left: 0;
+    width: 90%;
+    padding: 20px;
+  }
+
+  .persona-container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .persona {
+    width: 80%;
+  }
+}
+
+@media (max-width: 600px) {
+  body.project-page {
+    flex-direction: column;
+  }
+
+  .project-card {
+    margin-left: 0;
+    width: 95%;
+  }
+}
