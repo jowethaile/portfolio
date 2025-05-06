@@ -112,10 +112,10 @@ body, html {
   z-index: 0;
 }
 
-.flower-1 { top: -20px; left: 10px; transform: rotate(-15deg); }
-.flower-2 { top: -20px; right: 10px; transform: rotate(20deg); }
-.flower-3 { bottom: -20px; left: 10px; transform: rotate(10deg); }
-.flower-4 { bottom: -20px; right: 10px; transform: rotate(-10deg); }
+.flower-1 { top: 10px; left: 10px; transform: rotate(-15deg); }
+.flower-2 { top: 10px; right: 10px; transform: rotate(20deg); }
+.flower-3 { bottom: 10px; left: 10px; transform: rotate(10deg); }
+.flower-4 { bottom: 10px; right: 10px; transform: rotate(-10deg); }
 .flower-5 { top: 40%; left: 0; transform: rotate(15deg); }
 .flower-6 { bottom: 40%; right: 0; transform: rotate(-20deg); }
 
