@@ -1,0 +1,139 @@
+  <!-- TO RUN IN BROWSER:
+    1. Install vscode extension Name: open in `browser open-in-browser` by TechER
+    2. Right click html file and either run in default browser or another browser
+  -->
+
+
+  <!DOCTYPE html>
+  <html lang="en">
+    <head>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <title>Responsive Redesign</title>
+      <link rel="stylesheet" href="styles.css" />
+    </head>
+  
+    <body class="project-page">
+      <div class="project-background"></div>
+    
+      <div class="project-card">
+        <header id="logoBar">
+          <h1>Responsive Redesign</h1>
+          <img id="siteLogo" alt="Site Logo" src="./assets/Header.png"/>
+          <h3>Exploring responsiveness of a local restaurant website and implementing redesigns.</h3>
+        </header>
+        <!-- <nav>
+          <ul>
+            <li><a href="#welcome">Welcome</a></li>
+            <li><a href="#original">The Original</a></li>
+            <li><a href="#styles">The Style Guide</a></li>
+            <li><a href="#mockup">The Mockups</a></li>
+            <li><a href="#redesign">The Redesign</a></li>
+            <li><a href="#conclusion">Conclusion</a></li> 
+          </ul>
+        </nav>
+      </div> -->
+  
+      <main>
+        <section id="welcome">
+        <h1>Welcome back! Next on the chopping board... <span style="color:#f5d142;">Noodle!</span></h1>
+        <p><strong>Have you ever been bored at 2am, tired of scrolling through mukbangs, DoorDash, and the same sad fast food sites? All you really want is to browse your favorite local Asian restaurant website, dreaming about your go-to order until they open.</strong> </p>
+        <p>But then...BOOM. The site looks like it was built before computers were even invented. </p>
+        <p>This redesign project brings modern design to a beloved local restaurant, making it not only beautiful, but functional, responsive, and fun to use for your late night food scrolling.</p>
+      </section>
+
+  
+        <section id="original">
+          <h2>The Original</h2>
+
+          <img class="centered-large-image" src="./assets/noodle_original.png" alt="Original Noodle website screenshot" />
+        
+          <p>
+            I chose only the best restaurant on the planet: <strong>Noodle</strong>. This is my favorite restaurant at home, but their website is so disappointing.
+          </p>
+        
+          <p>
+            Just look at it: <a href="https://www.decaturnoodle.com/rr90e5rh/restaurant/order-online" target="_blank">Noodle Original Site</a>. so much lost potiental This restaurant has done a lot for me so why not help ensure that no one is misguided by the website and mistake 
+            Noodle as an outdated restaurant.
+          </p>
+        
+          <h3>Issues</h3>
+          <ul>
+            <li><strong>Visually:</strong> There are no photos, no color contrast, no layout. Just an order platform, which isn't really helpful when a user does not know
+            about the place and can not visually see what they are ordering</li>
+            <li><strong>Broken Buttons:</strong> The All Day Menu button that does not even go anywhere nor is there multiple menus which that would insinuate.</li>
+            <li><strong>Accessibility:</strong> There is no alternative text, no visual hierarchy, no color contrast.</li>
+            <li><strong>Overwhelming:</strong> The site has the menu, checkout, and contact info all stacked together with no clear focus.</li>
+          </ul>
+          <h3> Analysis </h3>
+          <ul>
+            <li><strong>Learnability:</strong> Users might struggle to understand what the restaurant is known for since there is  no featured dishes or brand story.</li>
+            <li><strong>Memorability:</strong> The site is generic and does not leave a strong impression.</li>
+            <li><strong>Efficiency:</strong> Menu categories are clear and well organized, it is easy to tell what type of item each dish is.!</li>
+          </ul>
+          <p>
+            I wanted to redesign the site to actually reflect how good the restaurant is. Something that is clean, scrollable, and lets the food speak for itself.
+          </p>
+        </section>
+  
+        <section id="styles">
+          <h2>Style Guide</h2>
+          <p> I drew inspiration from the original website, physical menu and store design to create the style guide!</p>
+          <img class="centered-large-image" src="./assets/style.png" alt="High School Student Interview"/>
+        </section>
+  
+        <section id="mockup">
+          <h2>Mockup</h2>
+          <p>
+            I created three mockups in figma for desktop, iPad, and iPhone to make sure the redesign worked smoothly at every screen size. I added visual consistency with a color scheme, better displays,
+             and navigation menus. The navigation menus adapt between screens: a full nav bar for desktop and ipads, and a hamburger menu for mobile. 
+             I reorganized the site layout to be more intuitive, added scrollable menus, actual food photos, and better sectioning so users always know where they are.
+          </p>
+          <video controls width="100%" style="max-width: 400px;">
+            <source src="./assets/iphone.mov" type="video/quicktime">
+          </video>
+          <video controls width="100%" style="max-width: 400px;">
+            <source src="./assets/ipad-view.mov" type="video/quicktime">
+          </video>
+          <video controls width="100%" style="max-width: 400px;">
+            <source src="./assets/mac.mov" type="video/quicktime">
+          </video>
+          
+          
+        </section>
+  
+        <section id="redesign">
+          <h2>Redesign</h2>
+          <p> Time is up! Please step away from your kitchen stations and take your hands off your dishes. The judges are waiting... THE REDESIGN!
+            Now this is how Noodle deserves to be represented <a href="https://jowethaile.github.io/responsive-redesign/" target="_blank">Noodle Redesigned Site!</a>
+          </p>
+          <img class="centered-large-image" src="./assets/redesign.png" alt="Original Noodle website screenshot" />
+
+          <ul>
+            <li>Created a fully responsive layout with mobile, tablet, and desktop mockups and implementation</li>
+            <li>Added a sticky navbar and section navigation so users always know where they are</li>
+            <li>Implemented a collapsible sidebar menu and scrollable category bar for easy food browsing</li>
+            <li>Replaced long text lists with dynamic buttons + / - and a responsive cart system</li>
+            <li>Added actual food photos for visual engagement</li>
+            <li>Added a Start Order button with pickup/delivery toggles</li>
+            <li>Designed a real-time Open Now vs Closed Now feature that shows store hours in a popup</li>
+          </ul>
+        
+          <p>
+            <strong>Efficiency</strong>: Navigating the menu is fast and intuitive, you can jump to categories, add items to your cart, and scroll easily on any screen.<br>
+            <strong>Learnability</strong>: Clear section labels, popups, and interactive elements help interact with the site and easily learn how to take advantage of the menus<br>
+            <strong>Memorability</strong>: The redesign uses a strong visual brand with warm tones, fonts, and clean layout. I tried to make feels like a place you can replace your late night binge fast food scrolling and instead visit Noodle to pick out your favorite lunch for tomorrow.
+          </p>
+        </section>
+        <section id="conclusion">
+          <h2>Conclusion</h2>
+          <h2>Check out <span style="color:#f5d142;">Noodle!</span></h2>
+          <p>
+            This redesign taught me how to turn a boring, outdated page into a responsive, scrollable, and visually pleasing experience. 
+            I used consistent design elements, fixed usability problems, and made the website feel as flavorful as the food itself. The final product is easy to use, accessible, and a ready to browse on any device for your next trip to Noodle!
+          </p>
+        </section>
+
+      </main>
+    </body>
+  </html>
+  
