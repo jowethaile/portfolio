@@ -24,7 +24,7 @@ body, html {
     top: 0; left: 0;
     width: 100%;
     height: 100%;
-    background: url('/Users/jowet/Desktop/cs1300/portfolio/sunsets/atlantaskyline.jpg') no-repeat center center/cover;
+    background: url('sunsets/atlantaskyline.jpg') no-repeat center center/cover;
     filter: blur(2px);
     z-index: -1;
 }
@@ -79,77 +79,6 @@ body, html {
   overflow: hidden;
   min-height: 600px;
 }
-.flower-wrapper {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  grid-template-rows: repeat(3, 1fr);
-}
-.flower {
-  position: relative;
-}
-.flower-top-left { grid-area: 1 / 1; }
-.flower-top-right { grid-area: 1 / 3; }
-.flower-mid-left { grid-area: 2 / 1; }
-.flower-mid-right { grid-area: 2 / 3; }
-.flower-bottom-left { grid-area: 3 / 1; }
-.flower-bottom-right { grid-area: 3 / 3; }
-/* 
-.flower-wrapper {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  pointer-events: none;
-  z-index: 0;
-}
-
-.flower {
-  position: absolute;
-  width: 50px;
-  height: auto;
-  opacity: 0.7;
-  z-index: 0;
-}
-
-.flower-top-left {
-  top: 30px; left: 30px;
-  transform: rotate(-15deg);
-}
-
-.flower-top-right {
-  top: 30px; right: 30px;
-  transform: rotate(15deg);
-}
-
-.flower-mid-left {
-  top: 150px; left: 60px;
-  transform: translateY(-50%) rotate(-25deg);
-}
-
-.flower-mid-right {
-  top: 150px; right: 60px; 
-  transform: translateY(-50%) rotate(25deg);
-}
-
-.flower-bottom-left {
-  bottom: 30px; left: 30px; 
-  transform: rotate(-10deg);
-}
-
-.flower-bottom-right {
-  bottom: 30px; right: 30px;
-  transform: rotate(10deg);
-} */
-
-/* .about {
-    position: relative;
-    background-color:#ffeef2;
-     /* rgba(255, 235, 240, 0.6);  #ffeaea; 
-    padding: 100px 20px;
-    text-align: center;
-    overflow: hidden;
-} */
 
 
 .about h2 {
@@ -174,41 +103,6 @@ body, html {
     line-height: 1.7;
     color: #444;
 }
-/* 
-.flower {
-  position: absolute;
-  width: 60px;
-  height: 60px;
-  background-image: url('/Users/jowet/Desktop/cs1300/portfolio/misc/flower.png');
-  background-size: contain;
-  background-repeat: no-repeat;
-  opacity: 0.3;
-  pointer-events: none;
-}
-
-.flower-top-left { top: 30px; left: 30px; }
-.flower-top-right { top: 30px; right: 30px; }
-.flower-mid-left { top: 150px; left: 60px; }
-.flower-mid-right { top: 150px; right: 60px; }
-.flower-bottom-left { bottom: 30px; left: 30px; }
-.flower-bottom-right { bottom: 30px; right: 30px; } */
-
-
-/* .flower {
-    position: absolute;
-    width: 60px;
-    height: 60px;
-    background-image: url('/Users/jowet/Desktop/cs1300/portfolio/misc/flower.png');
-    /* url('flower-outline.svg'); */
-    /* background-size: contain;
-    background-repeat: no-repeat;
-    opacity: 0.3;
-}
-
-.flower-top-left { top: 20px; left: 20px; }
-.flower-top-right { top: 20px; right: 20px; }
-.flower-bottom-left { bottom: 20px; left: 20px; }
-.flower-bottom-right { bottom: 20px; right: 20px; } */ */
 
 .fade-in {
     opacity: 0;
@@ -220,44 +114,6 @@ body, html {
     opacity: 1;
     transform: translateY(0);
 }
-
-/* .flower {
-    position: absolute;
-    width: 70px;
-    opacity: 0.3;
-    pointer-events: none;
-}
-
-
-.flower-top-left {
-    top: 30px;
-    left: 30px;
-}
-
-.flower-top-right {
-    top: 40px;
-    right: 40px;
-}
-
-.flower-mid-left {
-    top: 150px;
-    left: 60px;
-}
-
-.flower-mid-right {
-    top: 160px;
-    right: 60px;
-}
-
-.flower-bottom-left {
-    bottom: 30px;
-    left: 40px;
-}
-
-.flower-bottom-right {
-    bottom: 20px;
-    right: 40px;
-} */
 
 .projects-section {
     padding: 100px 20px;
@@ -474,7 +330,7 @@ body, html {
   transform: translateX(-50%);
   width: 40px;
   height: 40px;
-  background-image: url('/Users/jowet/Desktop/cs1300/portfolio/misc/flower.png'); 
+  background-image: url('./misc/flower.png'); 
   background-size: contain;
   background-repeat: no-repeat;
   background-position: center;
@@ -563,8 +419,6 @@ body, html {
   }
 }
 
-/* --- NAVIGATION BAR STYLE --- */
-
 
 .main-header {
   background-color:#ffe2e2;
@@ -622,7 +476,3 @@ body, html {
 .nav-links a:hover {
   color: #b25d75;
 }
-
-/* body {
-  scroll-padding-top: 80px; 
-} */
